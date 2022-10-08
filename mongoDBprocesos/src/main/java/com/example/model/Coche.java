@@ -1,12 +1,24 @@
 package com.example.model;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(value = "Coches")
 public class Coche {
 	@Id
 	private String idCoche;
 	
 	private String modelo;
+	
+	private String usuario;
+
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
 
 	public String getIdCoche() {
 		return idCoche;
@@ -26,8 +38,10 @@ public class Coche {
 
 	@Override
 	public String toString() {
-		return "Coche [idCoche=" + idCoche + ", modelo=" + modelo + "]";
+		return "Coche [idCoche=" + idCoche + ", modelo=" + modelo + ", usuario=" + usuario + "]";
 	}
+
+	
 	
 	
 }

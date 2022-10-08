@@ -1,7 +1,7 @@
 package com.example.model;
 
 
-import java.util.Arrays;
+
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -17,24 +17,17 @@ public class Usuario {
 	
 	private String edad;
 
-	private Coche [] coches;
+	
 	
 
-	public Usuario(String id, String nombre, String edad, Coche [] coches) {
+	public Usuario(String id, String nombre, String edad) {
 		this.id = id;
 		this.nombre = nombre;
 		this.edad = edad;
-		this.coches=coches;
+		
 	}
 
-	public Coche[] getCoches() {
-		return coches;
-	}
-
-	public void setCoches(Coche[] coches) {
-		this.coches = coches;
-	}
-
+	
 	public String getId() {
 		return id;
 	}
@@ -61,8 +54,7 @@ public class Usuario {
 
 	@Override
 	public String toString() {
-		return "Usuario [id=" + id + ", nombre=" + nombre + ", edad=" + edad + ", coches=" + Arrays.toString(coches)
-				+ "]";
+		return "Usuario [id=" + id + ", nombre=" + nombre + ", edad=" + edad + "]";
 	}
 
 	

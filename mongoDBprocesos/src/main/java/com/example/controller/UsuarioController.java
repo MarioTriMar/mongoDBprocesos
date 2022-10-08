@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import com.example.model.Coche;
+
 import com.example.model.Usuario;
 import com.example.service.UsuarioService;
 
@@ -28,7 +28,6 @@ public class UsuarioController {
 	
 	@PostMapping(value= "/usuarios")
 	public void save(@RequestBody Usuario usuario) {
-		System.out.println("X");
 		usuarioServ.save(usuario);
 	}
 	
@@ -42,10 +41,10 @@ public class UsuarioController {
 		return usuarioServ.findById(id).get();
 	}
 	
-	@GetMapping(value= "/usuarioCoche/{id}")
-	public Coche[] findCarById(@PathVariable String id) {
-		return usuarioServ.findById(id).get().getCoches();
-	}
+	//@GetMapping(value= "/usuarioCoche/{id}")
+	//public Coche[] findCarById(@PathVariable String id) {
+	//	return usuarioServ.findById(id).get().getCoches();
+	//}
 	
 	@DeleteMapping(value= "/usuario/{id}")
 	public void deleteById(@PathVariable String id) {
