@@ -11,6 +11,14 @@ public class Coche {
 	private String modelo;
 	
 	private String usuario;
+	
+	
+
+	public Coche(String idCoche, String modelo, String usuario) {
+		this.idCoche = idCoche;
+		this.modelo = modelo;
+		this.usuario = usuario;
+	}
 
 	public String getUsuario() {
 		return usuario;

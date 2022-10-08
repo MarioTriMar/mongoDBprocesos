@@ -33,7 +33,7 @@ public class CocheController {
 		cocheServ.save(coche);
 	}
 	
-	@GetMapping(value= "/usuarios")
+	@GetMapping(value= "/coches")
 	public List	<Coche> findAll(){
 		return cocheServ.findAll();
 	}
