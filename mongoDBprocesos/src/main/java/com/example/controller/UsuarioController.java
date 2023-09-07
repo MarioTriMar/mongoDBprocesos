@@ -33,6 +33,10 @@ public class UsuarioController {
 	
 	@GetMapping(value= "/usuarios")
 	public List	<Usuario> findAll(){
+		int x=0;
+		for(int i=0;i<=1000;i++){
+			x+=i;
+		}
 		return usuarioServ.findAll();
 	}
 	
